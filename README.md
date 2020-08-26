@@ -17,7 +17,7 @@ In first step, *service.showGame()* is executed. It shows welcome message with i
 In second step user enter "X" or "O" from keyboard - *service.choosePlayer()* method call. Value is saved in *playerOorX* variable.
 
 *Image shows first part CircleAndCross class*
-![alt text](/.readmeimages/image1.jpg)
+![alt text](/.readmeimages/image1.png)
 
 In while loop application is executed as far as some player is winner or result of game is draw. 
 In first step application shows which player is actual - *service.startGame()* method. *service.setCoordinate()* enables get from user coordinates of field which should be fill "X" or "O". In method *service.setColumnAndRow()* this functionality is executed.
@@ -26,7 +26,7 @@ In first step application shows which player is actual - *service.startGame()* m
 If game is not end, in last step actual player is changed - *service.nextPlayer()* method.
 
 *Image shows second part CircleAndCross class*
-![alt text](/.readmeimages/image2.jpg)
+![alt text](/.readmeimages/image2.png)
 
 *AppService* class contains service methods which realized logical functionalities.
 *showGame()* method calls *PrintService.printGame()* method which shows welcome message.
@@ -34,59 +34,59 @@ If game is not end, in last step actual player is changed - *service.nextPlayer(
 *startGame()* method calls *PrintService.printGame()* method with information about actual player.
 
 *Image shows AppService class with showGame(), choosePlayer(), startGame() methods*
-![alt text](/.readmeimages/image3.jpg)
+![alt text](/.readmeimages/image3.png)
 
 *service.setCoordinate()* enables get from user coordinates of field which should be fill "X" or "O". This method can get coordinate of row or column. This functionality is regulated by boolean *row* variable. If is true, *PrintService.printMessageRow()* is called, if false - then *PrintService.printMessageColumn()*. Next method get value from keyboard *getScannerInput()* and this value is parsed to Integer and is returned. 
 *service.setColumnAndRow()* take String[][] fields, actual player and coordinates and this information enables save actual status of game in String tab.
 
 *Image shows AppService class with setCoordinate(), setColumnAndRow() methods*
-![alt text](/.readmeimages/image4.jpg)
+![alt text](/.readmeimages/image4.png)
 
 *checkDraw()* method check actual status of game (String tab) by searching any " " (emply field) in tab. When some field in tab is empty, draw is false and method is end. When draw is true, *PrintService.printGame()* is called and program show info about draw.
 
 *Image shows checkDraw() method from AppService class*
-![alt text](/.readmeimages/image5.jpg)
+![alt text](/.readmeimages/image5.png)
 
 *checkWin()* method duty is check that some player is winner. This functionality is realized in private method *checkRowColumnDiagonal()*. This method return true if actual player is winner and false if is not.
 
 *Image shows checkWin() method from AppService class*
-![alt text](/.readmeimages/image6.jpg)
+![alt text](/.readmeimages/image6.png)
 
 *checkRowColumnDiagonal()* method searching win set of "X" or "O" in String tab.
 This method store f11, f12, ..., f33 String variables and that corresponds with coordinates fields[0][0], fields[0][1], ..., fields[2][2].
 In boolean[] check is saved results of 8 calls of check3fields() method. Three calls of this method check win in all rows, next three in all columns and last dwo in diagonal of tab. This method return true or false. If any of result is true then win is true - in this situation actual player is winner.
 
 *Image shows checkColumnRowDiagonal() method from AppService class*
-![alt text](/.readmeimages/image7.jpg)
+![alt text](/.readmeimages/image7.png)
 
 *check3fields()* method check that in one line of three fields of tab (row, column or diagonal) is the same value "X" or "O" and check that fields is not empty " ". In this situation return true.
 
 *Image shows check3fields() private method from AppService class*
-![alt text](/.readmeimages/image8.jpg)
+![alt text](/.readmeimages/image8.png)
 
 *showWinner()* method called *PrintService.printGame()* method which shows information about that actual player is winner.
 *nextPlayer()* method change player - if actual is "X" then next is "O". When actual is "O" then next is "X".
 *getScannerInput()* method realized get value from keyboard with use Scanner class. Value is saved to String and this variable is returned.
 
 *Image shows showWinner(), nextPlayer(), getScannerInput() methods from AppService class*
-![alt text](/.readmeimages/image9.jpg)
+![alt text](/.readmeimages/image9.png)
 
 *PrintService* class enables show info about actual status of game and helpful messages during game.
 *printGame()* realized different duties and it is depend on transferred variables: String[][] fields - actual status of game, and message variable with actual step of game (actual player, win, draw etc.).
 *printMessageColumn()* and *printMessageRow()* method is used in *setCoordinate()* method to show information about actual coordinate (row or column).
 
 *Image shows PrintService class methods*
-![alt text](/.readmeimages/image10.jpg)
+![alt text](/.readmeimages/image10.png)
 
 *Example execution of CrossAndCircle application:*
 *In first step application give question about first player "X" or "O". User enter "X".*
-![alt text](/.readmeimages/image11.jpg)
+![alt text](/.readmeimages/image11.png)
 
 *In second step user enter coordinates of row and column eg. (1,1) and that corresponds with field[0][0].*
-![alt text](/.readmeimages/image12.jpg)
+![alt text](/.readmeimages/image12.png)
 
 *Actual status is saved at field[0][0] and show in console at (1,1).*
-![alt text](/.readmeimages/image13.jpg)
+![alt text](/.readmeimages/image13.png)
 
 *When some column, row or diagonal contains the same sign "X" or "O" actual player is winner - in this situation "X" is winner.*
-![alt text](/.readmeimages/image14.jpg)
+![alt text](/.readmeimages/image14.png)
