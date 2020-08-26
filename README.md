@@ -76,17 +76,22 @@ In boolean[] check is saved results of 8 calls of check3fields() method. Three c
 *printMessageColumn()* and *printMessageRow()* method is used in *setCoordinate()* method to show information about actual coordinate (row or column).
 
 *Image shows PrintService class methods*
+
 ![alt text](/.readmeimages/image10.png)
 
 *Example execution of CrossAndCircle application:*
 *In first step application give question about first player "X" or "O". User enter "X".*
+
 ![alt text](/.readmeimages/image11.png)
 
 *In second step user enter coordinates of row and column eg. (1,1) and that corresponds with field[0][0].*
+
 ![alt text](/.readmeimages/image12.png)
 
 *Actual status is saved at field[0][0] and show in console at (1,1).*
+
 ![alt text](/.readmeimages/image13.png)
 
 *When some column, row or diagonal contains the same sign "X" or "O" actual player is winner - in this situation "X" is winner.*
+
 ![alt text](/.readmeimages/image14.png)
